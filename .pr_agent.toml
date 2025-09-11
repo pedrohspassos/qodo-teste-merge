@@ -6,5 +6,12 @@ pr_commands = [
 "/describe",
 "/review",
 "/improve",
-"/test" # gera testes automaticamente
+"/test"
 ]
+
+[pr_reviewer]
+require_tests_review = true
+extra_instructions = """
+Para cada classe nova ou modificada, verifique se existem testes unitários
+cobrindo os métodos. Se faltar, liste as classes/métodos sem testes e sugira a construção.
+"""
